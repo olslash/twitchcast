@@ -1,3 +1,11 @@
+app/dist/
+dist/
+
+*.sublime-workspace
+*.swp
+*.db
+*.tmp
+
 # Logs
 logs
 *.log
