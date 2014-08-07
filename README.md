@@ -6,7 +6,7 @@ Twitch desktop client
 
 To debug and develop:
 
-> gulp watch
+> gulp watch  
 > sh debug.sh
 
 ... and code away!
