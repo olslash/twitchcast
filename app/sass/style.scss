@@ -1,6 +1,12 @@
 @import "settings";
 @import "foundation/foundation";
+@import "navigation";
 
-body {
-	background-color: white;
+.row.full-width {
+ 	width: 100%;
+ 	max-width: 100%; 
+}
+
+.bordered {
+	border: 1px solid;
 }

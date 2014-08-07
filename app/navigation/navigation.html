@@ -1,0 +1,34 @@
+<nav class="row full-width">
+		
+	<div class="purple-bar"></div>
+
+	<div class="navbar row">
+
+		<div class="links large-8 columns">
+			<ul>
+				<li ng-repeat="link in nav.links">
+					<a ng-class="link.active ? 'active' : 'inactive'" href="{{link.url}}">{{link.name}}</a>
+				</li>
+			</ul>
+		</div>
+
+		<div class="right-nav large-3 columns">
+			<div class="userbox">
+				<div class="userinfo">
+					<p>elgruntoxxxxxxxxx</p>
+					<ul>
+						<li><a href="#">profile</a></li>
+						<li><a href="#">logout</a></li>
+					</ul>
+				</div>
+				<img src="http://placekitten.com/g/50/50" />
+			</div>
+			
+			<div class="searchbox">
+				<input type="text" placeholder="search">
+			</div>
+		</div>
+
+	</div>
+
+</nav>

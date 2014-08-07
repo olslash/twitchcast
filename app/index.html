@@ -5,10 +5,9 @@
         <link rel="stylesheet" type="text/css" href="style.min.css">
     </head>
     <body ng-app="twitchcast">
-
-        <div class="container">
-            <div ui-view></div>
-        </div>
+        
+        <div ui-view="navigation"></div>
+        <div ui-view="content"></div>
 
         <script>
             if (process.env.TWITCHCAST_DEV == 1) {

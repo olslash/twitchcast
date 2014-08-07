@@ -4,6 +4,7 @@
 		'ui.router',
 		'templates',
 
+		'navigation',
 		'featured'
 	]);
 
@@ -12,16 +13,30 @@
 
 		$stateProvider
 
-			.state('featured', {
+			.state('root', {
+				url: '',
+				abstract: true,
+				views: {
+					'navigation': {
+						templateUrl: 'navigation/navigation.html',
+						controller: 'NavigationCtrl as nav'
+					}
+				}
+			})
+
+			.state('root.featured', {
 				url: '/featured',
-				templateUrl: 'featured/featured.html',
-				controller: 'FeaturedCtrl as featured'
+				views: {
+					'content@': {
+						templateUrl: 'featured/featured.html',
+						controller: 'FeaturedCtrl as featured'
+					}
+				}
 			});
 	};
 
 	angular
 		.module('twitchcast')
-		.controller('MainCtrl', MainCtrl)
 		.config(config);
 
 })();
