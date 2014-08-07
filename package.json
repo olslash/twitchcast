@@ -9,7 +9,7 @@
     "height": 720,
     "min_width": 1280,
     "min_height": 720,
-    "toolbar": false
+    "toolbar": true
   },
   "dependencies": {
     "castv2-client": "~0.0.2"

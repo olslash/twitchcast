@@ -78,11 +78,11 @@ gulp.task('watch', function() {
 gulp.task('default', [
     'scripts', 
     'templates', 
-    'vendorJS', 
-    'vendorCSS', 
     'copy-index', 
     'copy-package', 
     'copy-node-modules',
     'sass',
+    'vendorJS', 
+    'vendorCSS',
     'watch'
 ]);
