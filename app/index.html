@@ -1,10 +1,14 @@
 <!doctype html>
 <html>
     <head>
-        <link rel="stylesheet" type="text/css" href="css/style.min.css">
+        <link rel="stylesheet" type="text/css" href="lib.css">
+        <link rel="stylesheet" type="text/css" href="style.min.css">
     </head>
-    <body>
-        <p>Hello World</p>
+    <body ng-app="twitchcast">
+
+        <div class="container">
+            <div ui-view></div>
+        </div>
 
         <script>
             if (process.env.TWITCHCAST_DEV == 1) {
@@ -14,6 +18,10 @@
                 document.body.appendChild(script);
             }
         </script>
+
+        <script src="lib.js"></script>
+        <script src="templates.js"></script>
+        <script src="app.js"></script>
 
     </body>
 </html>

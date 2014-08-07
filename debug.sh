@@ -1,4 +1,4 @@
 export TWITCHCAST_DEV=1
 
-cd app/
+cd build/
 nodewebkit --remote-debugging-port=9222

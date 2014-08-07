@@ -1,34 +1,39 @@
 {
   "name": "twitchcast",
-  "version": "0.0.0",
-  "description": "Twitch desktop application",
-  "main": "index.js",
+  "main": "index.html",
+  "version": "0.0.1",
+  "single-instance": true,
+  "window": {
+    "title": "twitchcast",
+    "width": 1280,
+    "height": 720,
+    "min_width": 1280,
+    "min_height": 720,
+    "toolbar": false
+  },
+  "dependencies": {
+    "castv2-client": "~0.0.2"
+  },
+  "devDependencies": {
+    "gulp": "^3.8.7",
+    "gulp-angular-templatecache": "^1.2.1",
+    "gulp-concat": "^2.3.4",
+    "gulp-jshint": "^1.8.4",
+    "gulp-livereload": "^2.1.0",
+    "gulp-minify-css": "^0.3.7",
+    "gulp-plumber": "^0.6.4",
+    "gulp-rename": "^1.2.0",
+    "gulp-sass": "^0.7.2",
+    "gulp-uglify": "^0.3.1",
+    "nodewebkit": "^0.10.1-1"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/Ell/twitchcast.git"
-  },
-  "keywords": [
-    "twitch",
-    "node",
-    "node-webkit"
-  ],
   "author": "Ell",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/Ell/twitchcast/issues"
   },
-  "homepage": "https://github.com/Ell/twitchcast",
-  "devDependencies": {
-    "gulp": "^3.8.7",
-    "gulp-concat": "^2.3.4",
-    "gulp-jshint": "^1.8.4",
-    "gulp-livereload": "^2.1.0",
-    "gulp-minify-css": "^0.3.7",
-    "gulp-rename": "^1.2.0",
-    "gulp-sass": "^0.7.2",
-    "gulp-uglify": "^0.3.1"
-  }
+  "chromium-args": "--child-clean-exit"
 }
