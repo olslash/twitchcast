@@ -2,7 +2,9 @@
 
 	angular.module('twitchcast', [
 		'ui.router',
-		'templates'
+		'templates',
+
+		'featured'
 	]);
 
 	function config ($stateProvider, $urlRouterProvider) {
@@ -20,6 +22,6 @@
 	angular
 		.module('twitchcast')
 		.controller('MainCtrl', MainCtrl)
-		.config('config', config);
+		.config(config);
 
 })();

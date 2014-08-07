@@ -10,7 +10,9 @@ var gconcat = require('gulp-concat');
 var jshint = require('gulp-jshint');
 
 gulp.task('scripts', function(){
-    gulp.src(['!./app/**/*_test.js','./app/**/*.js'])
+    gulp.src(['!./app/**/*_test.js',
+        './app/application.js',
+        './app/**/*.js'])
         .pipe(gconcat('app.js'))
         .pipe(gulp.dest('./build'));
 });
@@ -24,6 +26,8 @@ gulp.task('templates',function(){
 
 gulp.task('vendorJS', function(){
     gulp.src(['!./bower_components/**/*.min.js',
+        './bower_components/angular/angular.js',
+        './bower_components/lodash/**/lodash.js',
         './bower_components/**/*.js'])
         .pipe(gconcat('lib.js'))
         .pipe(gulp.dest('./build'));
