@@ -2,6 +2,10 @@
 @import "foundation/foundation";
 @import "navigation";
 
+body {
+	overflow: hidden;
+}
+
 .row.full-width {
  	width: 100%;
  	max-width: 100%; 
