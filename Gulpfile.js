@@ -50,6 +50,11 @@ gulp.task('copy-package', function() {
         .pipe(gulp.dest('./build'));
 })
 
+gulp.task('copy-fonts', function() {
+    gulp.src('app/sass/font-awesome/fonts/**/*')
+        .pipe(gulp.dest('./build/fonts'));
+});
+
 gulp.task('sass', function() {
     return gulp.src('app/sass/*.scss')
         .pipe(plumber())
@@ -88,5 +93,6 @@ gulp.task('default', [
     'sass',
     'vendorJS', 
     'vendorCSS',
+    'copy-fonts',
     'watch'
 ]);

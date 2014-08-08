@@ -1,9 +1,10 @@
 @import "settings";
 @import "foundation/foundation";
+@import "font-awesome/font-awesome";
 @import "navigation";
 @import "featured";
 
-html {
+html, body {
 	overflow: hidden;
 }
 

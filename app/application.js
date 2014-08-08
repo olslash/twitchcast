@@ -1,42 +1,42 @@
 (function () {
 
-	angular.module('twitchcast', [
-		'ui.router',
-		'templates',
+    angular.module('twitchcast', [
+        'ui.router',
+        'templates',
 
-		'navigation',
-		'featured'
-	]);
+        'navigation',
+        'featured'
+    ]);
 
-	function config ($stateProvider, $urlRouterProvider) {
-		$urlRouterProvider.otherwise('/featured');
+    function config ($stateProvider, $urlRouterProvider) {
+        $urlRouterProvider.otherwise('/featured');
 
-		$stateProvider
+        $stateProvider
 
-			.state('root', {
-				url: '',
-				abstract: true,
-				views: {
-					'navigation': {
-						templateUrl: 'navigation/navigation.html',
-						controller: 'NavigationCtrl as nav'
-					}
-				}
-			})
+            .state('root', {
+                url: '',
+                abstract: true,
+                views: {
+                    'navigation': {
+                        templateUrl: 'navigation/navigation.html',
+                        controller: 'NavigationCtrl as nav'
+                    }
+                }
+            })
 
-			.state('root.featured', {
-				url: '/featured',
-				views: {
-					'content@': {
-						templateUrl: 'featured/featured.html',
-						controller: 'FeaturedCtrl as featured'
-					}
-				}
-			});
-	};
+            .state('root.featured', {
+                url: '/featured',
+                views: {
+                    'content@': {
+                        templateUrl: 'featured/featured.html',
+                        controller: 'FeaturedCtrl as featured'
+                    }
+                }
+            });
+    };
 
-	angular
-		.module('twitchcast')
-		.config(config);
+    angular
+        .module('twitchcast')
+        .config(config);
 
 })();

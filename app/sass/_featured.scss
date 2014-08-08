@@ -1,14 +1,20 @@
 .featured-container {
-	margin-top: 2%;
-	margin-left: 4.25%;
+    margin-top: 1.5%;
+    background-color: lighten(#eee, 6%);
 }
 
 .featured-container h1 {
-	margin-bottom: 35px;
-	padding-right: 200px;
+    margin-bottom: 15px;
+    padding-left: 4%;
 }
 
-.featured-list ul {
-	height: 800px;
-	overflow-y: auto;
+.featured-list {
+    height: 100%;
+    margin-top: 10px;
+    margin-bottom: 75px;
+
+    ul {
+        height: 800px;
+        overflow-y: auto;
+    }
 }
