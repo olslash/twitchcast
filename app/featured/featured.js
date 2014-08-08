@@ -1,6 +1,6 @@
 (function () {
 
-	angular.module('featured', []);
+	angular.module('featured', ['twitchapi']);
 
 	angular
 		.module('featured')

@@ -1,3 +1,5 @@
-function FeaturedCtrl () {
-	this.message = "Hello Controller";
+function FeaturedCtrl (TwitchApiService) {
+	TwitchApiService.getFeaturedStreams();
+
+	this.featured = TwitchApiService.featured;
 }

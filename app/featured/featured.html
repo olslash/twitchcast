@@ -1,0 +1,10 @@
+<div class="row full-width featured-container">
+	<h1>Featured Streams</h1>
+	<div class="large-11 columns featured-list">
+		<ul class="large-block-grid-5">
+			<li ng-repeat="feature in featured.featured.data | limitTo: 20">
+				<img src="{{feature.preview}}" />
+			</li>
+		</ul>
+	</div>
+</div>
